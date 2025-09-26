@@ -87,8 +87,8 @@ pip install -r requirements.txt
 # 分析サーバー用の.envファイルを作成
 cp .env.example .env
 # nano .env 
-APP_MAIL = ""
-APP_NAME = ""
+APP_MAIL = "自分のアドレス"
+APP_NAME = ""Sound Profile/1.0""
 PY_URL = "http://127.0.0.1:8000/recommend"
 
 # サーバー起動
