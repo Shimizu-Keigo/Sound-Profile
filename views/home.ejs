@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="app.css">
+    <title>Sound Profile</title>
+</head>
+<body>
+    <section>
+        <h1>Sound Profile</h1>
+        <form id = "searchForm">
+            <input type="text" id="artistInput" placeholder="アーティスト名" size="25">
+            <input type="text" id="titleInput" placeholder="曲名" size="25">
+        </form>
+        <div id="results"></div>
+        <div id="pagination">
+            <p id="pageInfo"></p>
+            <button id="prevBtn" style="display: none;">前のページ</button>
+            <button id="nextBtn" style="display: none;">次のページ</button>
+        </div>
+    </section>
+    
+
+    <hr>
+    <section>
+        <h2>⭐ お気に入りの曲 (<span id="favCount">0</span>/10)</h2>
+        <div id="favorites"></div>    
+    </section>
+
+    <hr>
+    <section>
+        <h2>あなたの好みの分析</h2>
+        <button id="analyzeBtn">分析結果を表示する</button>  
+        <div id="analysisResults"></div>   
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>

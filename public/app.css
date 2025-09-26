@@ -1,0 +1,147 @@
+/* 全体の余白 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* 検索結果・お気に入りリスト共通 */
+#results, #favorites {
+    display: flex;
+    flex-wrap: wrap;        /* 幅に応じて折り返す */
+    gap: 20px;              /* カード間の隙間 */
+}
+
+/* 1曲分のカード */
+.track-item {
+    display: flex;
+    flex-direction: column; /* 縦にまとめる */
+    align-items: center;
+    width: 150px;           /* カード幅 */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    background-color: #fafafa;
+}
+
+/* ジャケ写を統一サイズ */
+.track-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;      /* はみ出る部分をカット */
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* 曲名 */
+.track-item strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* アーティスト名 */
+.track-item span {
+    display: block;
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* ボタン */
+.track-item button {
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1db954; /* Spotify風グリーン */
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.track-item button:hover {
+    background-color: #17a84b;
+}
+
+#analyzeBtn { 
+    display: none;
+}
+
+
+#analysisResults {
+    display: flex;
+    flex-direction: column;  /* 縦に積む */
+    gap: 12px;
+    margin-top: 20px;
+    width: 80%;              /* 横幅 */
+    margin-left: auto;
+    margin-right: auto;      /* 中央寄せ */
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: row;     /* 横並び */
+    align-items: center;
+    gap: 15px;
+}
+
+.slider-container label {
+    width: 120px;            /* ラベル幅固定で揃える */
+    text-align: right;
+    font-weight: bold;
+}
+
+.slider-container input[type="range"] {
+    flex: 1;                 /* 余った横幅をスライダーに */
+}
+
+.slider-container span {
+    width: 50px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+
+  
+  /* 縦スライダー本体 */
+  input[type="range"].vertical {
+    writing-mode: bt-lr;  /* bottom-to-top, left-to-right */
+    appearance: slider-vertical;         /* 標準 */
+    -webkit-appearance: slider-vertical; /* Safari/Chrome */
+    -moz-appearance: slider-vertical;    /* Firefox */
+    width: 8px;           /* スライダーの太さ */
+    height: 200px;        /* スライダーの長さ */
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  /* スライダーのつまみ (WebKit系) */
+  input[type="range"].vertical::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -6px;
+  }
+  
+  /* スライダーのつまみ (Firefox) */
+  input[type="range"].vertical::-moz-range-thumb {
+    appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  

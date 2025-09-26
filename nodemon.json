@@ -1,0 +1,5 @@
+{
+    "watch": ["app.js", "index.js", "views", "public"],
+    "ignore": ["py_server/**", "venv/**", "node_modules/**", ".git/**"]
+  }
+  
